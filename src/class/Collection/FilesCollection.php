@@ -10,7 +10,7 @@ use SplFileInfo;
 
 class FilesCollection extends Collection {
 
-    public function __construct(array|SplFileInfo $param) {
+    public function __construct(array|string $param) {
         $array = [];
 
         if ( !empty($param) ) {
