@@ -44,11 +44,11 @@ class Filesystem {
      *
      * @return array of strings
      */
-    public static function deleteFiles(array|string|SplFileInfo $files, array $settings = [ 'ignore_non_existing' => true ] ): bool {
-        $paths = Param::getFilesParam($files);
+    public static function deleteFiles(array|string|SplFileInfo $files_param, array $settings = [ 'ignore_non_existing' => true ] ): bool {
+        $files = Param::getFilesParam($files_param);
 
-        foreach ($paths as $path) {
-            $absolute_path = $path->getPathname();
+        foreach ($files as $file) {
+            $absolute_path = $file->getPathname();
 
             try {
                 Assert::lazy()->tryAll()
@@ -70,7 +70,29 @@ class Filesystem {
                 throw new Exception( "Fatal error: Invalid absolute path" . $e->getMessage() );
             }
 
-            if ( is_file($absolute_path) ) {
+            if ( $file->isLink() ) {
+                if ( @unlink($absolute_path) ) {
+                    Output::success('Successfully deleted symlink: "' . $absolute_path . '"');
+                    continue;
+
+                } else {
+                    throw new RuntimeException('Cannot delete symlink: "' . $absolute_path . '"');
+                }
+   
+            } elseif ( is_dir($absolute_path) ) {
+                if ( @rmdir($absolute_path) ) {
+                    Output::success('Successfully deleted directory: "' . $absolute_path . '"');
+                    continue;
+
+                } else {
+                    // TODO: to check access rights
+
+                    // TODO: to recursively delete content
+
+                    throw new RuntimeException('Cannot delete directory: "' . $absolute_path . '"');
+                }
+
+            } elseif ( is_file($absolute_path) ) {
                 if ( @unlink($absolute_path) ) {
                     Output::success('Successfully deleted file: "' . $absolute_path . '"');
                     continue;
@@ -78,7 +100,7 @@ class Filesystem {
                 } else {
                     throw new RuntimeException('Cannot delete file: "' . $absolute_path . '"');
                 }
-   
+
             } else {
                 if ( isset( $settings['ignore_non_existing'] ) && $settings['ignore_non_existing'] === false ) {
                     throw new RuntimeException('Cannot delete file: "' . $absolute_path . '". The file does not exist');
