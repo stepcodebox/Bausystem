@@ -8,6 +8,7 @@ use Assert\LazyAssertionException;
 use RuntimeException;
 use GlobIterator;
 use SplFileInfo;
+use Exception;
 
 class Filesystem {
 
@@ -46,7 +47,7 @@ class Filesystem {
         $paths = Param::getFilesParam($files);
 
         foreach ($paths as $path) {
-            $absolute_path = $path->getRealPath();
+            $absolute_path = $path->getPath();
 
             try {
                 Assert::lazy()->tryAll()
@@ -82,6 +83,8 @@ class Filesystem {
                 }
             }
         }
+
+        return true;
     }
 
 }

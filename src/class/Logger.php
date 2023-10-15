@@ -24,7 +24,7 @@ class Logger {
             }
 
             if  ( !is_writable($this->filepath) ) {
-                trigger_error_in_class('Can\'t write to a file: ' . $this->filepath);
+                new Exception('Can\'t write to a file: ' . $this->filepath);
             }
 
             $this->handle = fopen($this->filepath, 'a+');
