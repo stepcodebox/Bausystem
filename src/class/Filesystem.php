@@ -9,6 +9,7 @@ use RuntimeException;
 use GlobIterator;
 use SplFileInfo;
 use Exception;
+use Bausystem\Output;
 
 class Filesystem {
 
@@ -47,7 +48,7 @@ class Filesystem {
         $paths = Param::getFilesParam($files);
 
         foreach ($paths as $path) {
-            $absolute_path = $path->getPath();
+            $absolute_path = $path->getPathname();
 
             try {
                 Assert::lazy()->tryAll()
@@ -71,8 +72,9 @@ class Filesystem {
 
             if ( is_file($absolute_path) ) {
                 if ( @unlink($absolute_path) ) {
+                    Output::success('Successfully deleted file: "' . $absolute_path . '"');
                     continue;
-                    
+
                 } else {
                     throw new RuntimeException('Cannot delete file: "' . $absolute_path . '"');
                 }

@@ -42,7 +42,7 @@ class ErrorHandler {
     }
 
     private static function displayRuntimeException(string $error_message) {
-        Output::error('Error occured. ' . $error_message . PHP_EOL);
+        Output::error('Error occured. ' . $error_message);
     }
 
     private static function displayException(string $error_type, string $error_message, string $error_file, string $error_line, array $backtrace_items) {
@@ -73,7 +73,7 @@ class ErrorHandler {
         $backtrace_text = join(PHP_EOL, $backtrace_lines);
 
         if ( !empty($backtrace_lines) ) {
-            $output .= "Backtrace: " . PHP_EOL . $backtrace_text . PHP_EOL;
+            $output .= "Backtrace: " . PHP_EOL . $backtrace_text;
         }
 
         Output::error($output);
