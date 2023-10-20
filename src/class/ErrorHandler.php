@@ -3,7 +3,7 @@
 namespace Bausystem;
 
 use Bausystem\Output;
-use Bausystem\Logger;
+use Blocks\System\SimpleLogger;
 use Throwable;
 
 /**
@@ -15,7 +15,7 @@ use Throwable;
  * done through Exceptions.
  */
 class ErrorHandler {
-    private static Logger $logger;
+    private static SimpleLogger $logger;
 
     public static function init($logger) {
         self::$logger = $logger;

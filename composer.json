@@ -3,7 +3,8 @@
         "aws/aws-sdk-php": "^3.33",
         "symfony/yaml": "^6.1",
         "beberlei/assert": "^3.3",
-        "phpunit/phpunit": "^9.6"
+        "phpunit/phpunit": "^9.6",
+        "blocksframework/system": "dev-master"
     },
     "autoload": {
         "psr-4": {

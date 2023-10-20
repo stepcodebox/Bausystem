@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9468526b659e26dba63dfb8ed75a94b3",
+    "content-hash": "02315e860158978c1b1845a822db0f79",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.282.0",
+            "version": "3.283.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "79a3ed5bb573f592823f8b1cffe0dbac3132e6b4"
+                "reference": "0f73ec85852312a6e971cfe2eebfd7c8091cca34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/79a3ed5bb573f592823f8b1cffe0dbac3132e6b4",
-                "reference": "79a3ed5bb573f592823f8b1cffe0dbac3132e6b4",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0f73ec85852312a6e971cfe2eebfd7c8091cca34",
+                "reference": "0f73ec85852312a6e971cfe2eebfd7c8091cca34",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.282.0"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.283.8"
             },
-            "time": "2023-09-28T18:09:20+00:00"
+            "time": "2023-10-19T19:26:52+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -221,6 +221,52 @@
                 "source": "https://github.com/beberlei/assert/tree/v3.3.2"
             },
             "time": "2021-12-16T21:41:27+00:00"
+        },
+        {
+            "name": "blocksframework/system",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blocksframework/system.git",
+                "reference": "ef6226440a272528f9bad2b63116696f0e356f44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blocksframework/system/zipball/ef6226440a272528f9bad2b63116696f0e356f44",
+                "reference": "ef6226440a272528f9bad2b63116696f0e356f44",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Blocks\\System\\": "src/class"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Stephenson",
+                    "email": "stephenson.inbox@gmail.com"
+                }
+            ],
+            "description": "A module with the most basic and important classes of the Blocks PHP framework",
+            "keywords": [
+                "blocks",
+                "framework",
+                "system"
+            ],
+            "support": {
+                "issues": "https://github.com/blocksframework/system/issues",
+                "source": "https://github.com/blocksframework/system/tree/master"
+            },
+            "time": "2023-10-20T20:04:44+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -2857,7 +2903,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "blocksframework/system": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -16,7 +16,7 @@ if ( isset($config) && isset( $config['log_path'] ) ) {
     $log_path = null;
 }
 
-$logger = new Bausystem\Logger($log_path);
+$logger = new Blocks\System\SimpleLogger($log_path);
 
 Bausystem\ErrorHandler::init($logger);
 
