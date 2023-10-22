@@ -1,5 +1,6 @@
 {
     "require": {
+        "php": ">=8.2",
         "aws/aws-sdk-php": "^3.33",
         "symfony/yaml": "^6.1",
         "beberlei/assert": "^3.3",
@@ -38,5 +39,7 @@
             "name": "Stephen Stephenson",
             "email": "stephenson.inbox@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

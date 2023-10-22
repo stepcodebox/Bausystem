@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "02315e860158978c1b1845a822db0f79",
+    "content-hash": "3e4242973b2c94ab21c111d556387147",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -62,16 +62,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.283.8",
+            "version": "3.283.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "0f73ec85852312a6e971cfe2eebfd7c8091cca34"
+                "reference": "0233b9f3f2155dac35c829ce4fc1b7cdb6ff8c0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0f73ec85852312a6e971cfe2eebfd7c8091cca34",
-                "reference": "0f73ec85852312a6e971cfe2eebfd7c8091cca34",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0233b9f3f2155dac35c829ce4fc1b7cdb6ff8c0a",
+                "reference": "0233b9f3f2155dac35c829ce4fc1b7cdb6ff8c0a",
                 "shasum": ""
             },
             "require": {
@@ -151,9 +151,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.283.8"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.283.9"
             },
-            "time": "2023-10-19T19:26:52+00:00"
+            "time": "2023-10-20T20:03:26+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -223,21 +223,70 @@
             "time": "2021-12-16T21:41:27+00:00"
         },
         {
+            "name": "blocksframework/data",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blocksframework/data.git",
+                "reference": "308ddf7e05091c27aa55e750e21809161ec74405"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blocksframework/data/zipball/308ddf7e05091c27aa55e750e21809161ec74405",
+                "reference": "308ddf7e05091c27aa55e750e21809161ec74405",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Blocks\\Data\\": "src/class"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Stephenson",
+                    "email": "stephenson.inbox@gmail.com"
+                }
+            ],
+            "description": "Classes for data structures of the Blocks PHP framework",
+            "keywords": [
+                "blocks",
+                "data",
+                "framework"
+            ],
+            "support": {
+                "issues": "https://github.com/blocksframework/data/issues",
+                "source": "https://github.com/blocksframework/data/tree/master"
+            },
+            "time": "2023-10-21T16:04:11+00:00"
+        },
+        {
             "name": "blocksframework/system",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blocksframework/system.git",
-                "reference": "ef6226440a272528f9bad2b63116696f0e356f44"
+                "reference": "6a55b139fd8fa8a9ce83dc95b35101388ea734fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blocksframework/system/zipball/ef6226440a272528f9bad2b63116696f0e356f44",
-                "reference": "ef6226440a272528f9bad2b63116696f0e356f44",
+                "url": "https://api.github.com/repos/blocksframework/system/zipball/6a55b139fd8fa8a9ce83dc95b35101388ea734fb",
+                "reference": "6a55b139fd8fa8a9ce83dc95b35101388ea734fb",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2"
+                "beberlei/assert": "^3.3",
+                "blocksframework/data": "dev-master",
+                "php": ">=8.2",
+                "phpunit/phpunit": "^9.6"
             },
             "default-branch": true,
             "type": "library",
@@ -266,7 +315,7 @@
                 "issues": "https://github.com/blocksframework/system/issues",
                 "source": "https://github.com/blocksframework/system/tree/master"
             },
-            "time": "2023-10-20T20:04:44+00:00"
+            "time": "2023-10-21T16:03:59+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -2902,13 +2951,15 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "blocksframework/system": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=8.2"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }
