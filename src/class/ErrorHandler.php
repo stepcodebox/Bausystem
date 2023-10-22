@@ -3,6 +3,7 @@
 namespace Bausystem;
 
 use Blocks\System\SimpleLogger;
+use Blocks\System\Helper\CommandLineOutput;
 
 /**
  * A class for catching all the regular exceptions and displaying them to the
@@ -41,7 +42,7 @@ class ErrorHandler {
     }
 
     private static function displayRuntimeException( string $error_message ) {
-        Output::error( 'Error occured. '.$error_message );
+        CommandLineOutput::error( 'Error occured. '.$error_message );
     }
 
     private static function displayException( string $error_type, string $error_message, string $error_file, string $error_line, array $backtrace_items ) {
@@ -75,7 +76,7 @@ class ErrorHandler {
             $output .= 'Backtrace: '.PHP_EOL.$backtrace_text;
         }
 
-        Output::error( $output );
+        CommandLineOutput::error( $output );
     }
 
     private static function getLogRecord( $error_type, $error_message, $error_file, $error_line, $backtrace_items ) {
