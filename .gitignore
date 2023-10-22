@@ -3,3 +3,4 @@
 /vendor/
 /.php_cs.cache
 /.php-cs-fixer.cache
+/tools/php-cs-fixer/vendor/

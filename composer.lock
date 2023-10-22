@@ -274,12 +274,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/blocksframework/system.git",
-                "reference": "6a55b139fd8fa8a9ce83dc95b35101388ea734fb"
+                "reference": "e96cf86f809e2520ffa8dbb521c074a3b15ce264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blocksframework/system/zipball/6a55b139fd8fa8a9ce83dc95b35101388ea734fb",
-                "reference": "6a55b139fd8fa8a9ce83dc95b35101388ea734fb",
+                "url": "https://api.github.com/repos/blocksframework/system/zipball/e96cf86f809e2520ffa8dbb521c074a3b15ce264",
+                "reference": "e96cf86f809e2520ffa8dbb521c074a3b15ce264",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
                 "issues": "https://github.com/blocksframework/system/issues",
                 "source": "https://github.com/blocksframework/system/tree/master"
             },
-            "time": "2023-10-21T16:03:59+00:00"
+            "time": "2023-10-22T08:57:46+00:00"
         },
         {
             "name": "doctrine/instantiator",
