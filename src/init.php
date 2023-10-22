@@ -1,23 +1,24 @@
 <?php
 
-if (version_compare(phpversion(), '8.2', '<') == true) {
-    echo 'PHP 8.2 or newer is required. Your PHP version is: ' . phpversion() . '. Exiting.' . PHP_EOL;
+if ( true == version_compare( phpversion(), '8.2', '<' ) ) {
+    echo 'PHP 8.2 or newer is required. Your PHP version is: '.phpversion().'. Exiting.'.PHP_EOL;
 
-    exit(1);
+    exit( 1 );
 }
 
-set_time_limit(0);
+set_time_limit( 0 );
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
-if ( isset($config) && isset( $config['log_path'] ) ) {
+if ( isset( $config, $config['log_path'] ) ) {
     $log_path = $config['log_path'];
-} else {
+}
+else {
     $log_path = null;
 }
 
-$logger = new Blocks\System\SimpleLogger($log_path);
+$logger = new Blocks\System\SimpleLogger( $log_path );
 
-Bausystem\ErrorHandler::init($logger);
+Bausystem\ErrorHandler::init( $logger );
 
-set_exception_handler('Bausystem\ErrorHandler::exceptionHandler');
+set_exception_handler( 'Bausystem\ErrorHandler::exceptionHandler' );
