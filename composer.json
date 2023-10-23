@@ -1,4 +1,13 @@
 {
+    "name": "stepcodebox/bausystem",
+    "description": "A set of PHP classes for writing DevOps scripts",
+    "license": "MIT",
+    "keywords": [
+        "devops",
+        "tools",
+        "CI/CD",
+        "bausystem"
+    ],
     "require": {
         "php": ">=8.2",
         "aws/aws-sdk-php": "^3.33",
