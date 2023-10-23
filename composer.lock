@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e4242973b2c94ab21c111d556387147",
+    "content-hash": "324dc964f9c478eb91ec802f571d9957",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -228,12 +228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/blocksframework/data.git",
-                "reference": "308ddf7e05091c27aa55e750e21809161ec74405"
+                "reference": "af2f6955073f2c7bab3843d17302685c435dc6c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blocksframework/data/zipball/308ddf7e05091c27aa55e750e21809161ec74405",
-                "reference": "308ddf7e05091c27aa55e750e21809161ec74405",
+                "url": "https://api.github.com/repos/blocksframework/data/zipball/af2f6955073f2c7bab3843d17302685c435dc6c0",
+                "reference": "af2f6955073f2c7bab3843d17302685c435dc6c0",
                 "shasum": ""
             },
             "require": {
@@ -266,7 +266,7 @@
                 "issues": "https://github.com/blocksframework/data/issues",
                 "source": "https://github.com/blocksframework/data/tree/master"
             },
-            "time": "2023-10-21T16:04:11+00:00"
+            "time": "2023-10-22T17:57:02+00:00"
         },
         {
             "name": "blocksframework/system",
@@ -274,12 +274,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/blocksframework/system.git",
-                "reference": "6cddf4f78ff26ec082934af31f2c80bff202b164"
+                "reference": "f2d8a6f63a558fd4a6b409a35d0d6e9f564ba703"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blocksframework/system/zipball/6cddf4f78ff26ec082934af31f2c80bff202b164",
-                "reference": "6cddf4f78ff26ec082934af31f2c80bff202b164",
+                "url": "https://api.github.com/repos/blocksframework/system/zipball/f2d8a6f63a558fd4a6b409a35d0d6e9f564ba703",
+                "reference": "f2d8a6f63a558fd4a6b409a35d0d6e9f564ba703",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
                 "issues": "https://github.com/blocksframework/system/issues",
                 "source": "https://github.com/blocksframework/system/tree/master"
             },
-            "time": "2023-10-22T15:35:31+00:00"
+            "time": "2023-10-22T22:17:22+00:00"
         },
         {
             "name": "doctrine/instantiator",
