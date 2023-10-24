@@ -23,9 +23,9 @@ class Bausystem {
             $log_path = null;
         }
 
-        $logger = new Blocks\System\SimpleLogger( $log_path );
+        $logger = new \Blocks\System\SimpleLogger( $log_path );
 
-        Bausystem\ErrorHandler::init( $logger );
+        \Bausystem\ErrorHandler::init( $logger );
 
         set_exception_handler( 'Bausystem\ErrorHandler::exceptionHandler' );
 
