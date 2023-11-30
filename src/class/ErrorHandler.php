@@ -2,8 +2,8 @@
 
 namespace Bausystem;
 
-use Blocks\System\SimpleLogger;
 use Blocks\System\Helper\CommandLineOutput;
+use Blocks\System\SimpleLogger;
 
 /**
  * A class for catching all the regular exceptions and displaying them to the
